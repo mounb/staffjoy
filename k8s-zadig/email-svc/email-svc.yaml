@@ -29,7 +29,6 @@ metadata:
 spec:
   selector:
     app: email-svc
-    env: test
   ports:
     - protocol: TCP
       port: 80

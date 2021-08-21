@@ -30,7 +30,6 @@ metadata:
 spec:
   selector:
     app: faraday-svc
-    env: test
   ports:
     - protocol: TCP
       port: 80
