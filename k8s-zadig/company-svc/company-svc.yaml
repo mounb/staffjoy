@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: company-svc
-        env: test
+        env: { { .active } }
     spec:
       containers:
         - name: company-svc
@@ -29,6 +29,7 @@ metadata:
 spec:
   selector:
     app: company-svc
+    env: { { .active } }
   ports:
     - protocol: TCP
       port: 80

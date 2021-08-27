@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: whoami-svc
-        env: test
+        env: { { .active } }
     spec:
       containers:
         - name: whoami-svc
@@ -29,6 +29,7 @@ metadata:
 spec:
   selector:
     app: whoami-svc
+    env: { { .active } }
   ports:
     - protocol: TCP
       port: 80

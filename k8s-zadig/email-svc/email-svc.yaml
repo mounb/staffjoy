@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: email-svc
-        env: test
+        env: { { .active } }
     spec:
       containers:
         - name: mail-svc
@@ -29,6 +29,7 @@ metadata:
 spec:
   selector:
     app: email-svc
+    env: { { .active } }
   ports:
     - protocol: TCP
       port: 80
