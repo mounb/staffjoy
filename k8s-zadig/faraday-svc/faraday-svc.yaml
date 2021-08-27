@@ -10,7 +10,7 @@ spec:
     metadata:
       labels:
         app: faraday-svc
-        env: { { .active } }
+        env: {{ .active }}
     spec:
       containers:
         - name: faraday-svc
@@ -30,7 +30,7 @@ metadata:
 spec:
   selector:
     app: faraday-svc
-    env: { { .active } }
+    env: {{ .active }}
   ports:
     - protocol: TCP
       port: 80

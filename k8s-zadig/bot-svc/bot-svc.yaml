@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: bot-svc
-        env: { { .active } }
+        env: {{ .active }}
     spec:
       containers:
         - name: bot-svc
@@ -29,7 +29,7 @@ metadata:
 spec:
   selector:
     app: bot-svc
-    env: { { .active } }
+    env: {{ .active }}
   ports:
     - protocol: TCP
       port: 80
